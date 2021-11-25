@@ -1,0 +1,28 @@
+{
+  "staff": [
+    {
+      "email": "elhanouniazeddine00@gmail.com",
+      "password": "azeddine.1998",
+      "fullName": "azeddinezer0",
+      "speciality": "math",
+      "id": 1
+    },
+    {
+      "email": "ryozakiazeddine@gmail.com",
+      "password": "123",
+      "fullName": "zer0 ",
+      "speciality": "physics",
+      "id": 2
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
