@@ -1,3 +1,4 @@
+
 const Submitregister = document.getElementById('Register')
 const FullName = document.getElementById('FullName')
 const speciality = document.getElementById('speciality')

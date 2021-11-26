@@ -1,6 +1,5 @@
 {
-  "staff": [
-    {
+  "staff": [{
       "email": "elhanouniazeddine00@gmail.com",
       "password": "azeddine.1998",
       "fullName": "azeddinezer0",
@@ -23,10 +22,22 @@
     }
   ],
   "Student": [],
-  "Questions": [
-    
-  ],
+  "Questions": [],
   "Answers": [],
   "Level": [],
-  "History": []
+  "History": [],
+  "Test": [],
+  "Subjects": [{
+      "Subject": "Math",
+      "type": "Parent",
+      "ArrayOfChilds": [],
+      "id": 1
+    },
+    {
+      "Subject": "Physics",
+      "type": "Parent",
+      "ArrayOfChilds": [],
+      "id": 2
+    }
+  ]
 }
