@@ -13,16 +13,20 @@
       "fullName": "zer0 ",
       "speciality": "physics",
       "id": 2
-    }
-  ],
-  "comments": [
+    },
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "email": "youcode@fmail.com",
+      "password": "123",
+      "fullName": "yo",
+      "speciality": "info",
+      "id": 3
     }
   ],
-  "profile": {
-    "name": "typicode"
-  }
+  "Student": [],
+  "Questions": [
+    
+  ],
+  "Answers": [],
+  "Level": [],
+  "History": []
 }
