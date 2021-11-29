@@ -10,23 +10,287 @@
     {
       "email": "ryozakiazeddine@gmail.com",
       "password": "123",
-      "fullName": "zer0 ",
-      "speciality": "physics",
+      "fullName": "Ryozaki L",
+      "speciality": "Detective",
       "id": 2
     },
     {
       "email": "youcode@fmail.com",
       "password": "123",
-      "fullName": "yo",
-      "speciality": "info",
+      "fullName": "Youcode Safi",
+      "speciality": "Ecole",
       "id": 3
     }
   ],
   "Student": [],
   "Questions": [
-    
+    {
+      "Question": "1 + 4",
+      "Score": "10",
+      "type": "Question",
+      "id": "dda3a4bd-3dfb-4a25-85b8-bed37ce3aa9b"
+    },
+    {
+      "Question": "444 +  444",
+      "Score": "33",
+      "type": "Question",
+      "id": "9906680a-ee67-432c-9460-e191a322a3b4"
+    },
+    {
+      "Question": "4 + 4",
+      "Score": "12",
+      "type": "Question",
+      "id": "22c3bf7d-b2c9-40b8-8077-335ee05d60d2"
+    },
+    {
+      "Question": "safas",
+      "Score": "afasf",
+      "type": "Question",
+      "id": "3e95fdd2-3663-4b9e-bdf6-e120449d3ac6"
+    },
+    {
+      "Question": "asfasf",
+      "Score": "qrqwr",
+      "type": "Question",
+      "id": "2ecffca9-cc78-4900-a64d-b95ff4a0eb96"
+    },
+    {
+      "Question": "dddddddd",
+      "Score": "ddddddddddd",
+      "type": "Question",
+      "id": "e812482b-533e-48d9-9727-0b4a1a66e99d"
+    },
+    {
+      "Question": "rrrrrrrrr",
+      "Score": "rrrrrrrrrrr",
+      "type": "Question",
+      "id": "953a6906-a7b0-40e8-a878-90c9397209a5"
+    },
+    {
+      "Question": "asfasf",
+      "Score": "qwrqwt",
+      "type": "Question",
+      "id": "78f7c7eb-5726-4673-83fc-431f18af8a1c"
+    },
+    {
+      "Question": "wa bro",
+      "Score": "10",
+      "type": "Question",
+      "id": "f9a3a729-173f-49a9-ab6f-72ea2ec70dba"
+    }
   ],
   "Answers": [],
   "Level": [],
-  "History": []
+  "History": [],
+  "Test": [],
+  "Subjects": [
+    {
+      "Subject": "Math",
+      "type": "Parent",
+      "ArrayOfChilds": [
+        4,
+        9
+      ],
+      "id": 1
+    },
+    {
+      "Subject": "Physics",
+      "type": "Parent",
+      "ArrayOfChilds": [
+        10
+      ],
+      "id": 2,
+      "hasQuestions": true
+    },
+    {
+      "Subject": "Info",
+      "type": "Parent",
+      "ArrayOfChilds": [
+        14,
+        15,
+        16
+      ],
+      "id": 3
+    },
+    {
+      "Subject": "Algebre",
+      "type": "Child",
+      "ArrayOfChilds": [
+        7,
+        8
+      ],
+      "id": 4
+    },
+    {
+      "Subject": "Analyse",
+      "type": "Child",
+      "ArrayOfChilds": [],
+      "id": 5
+    },
+    {
+      "Subject": "Geomitre",
+      "type": "Child",
+      "ArrayOfChilds": [],
+      "id": 6
+    },
+    {
+      "Subject": "chapiter 1",
+      "type": "Child",
+      "ArrayOfChilds": [
+        "dda3a4bd-3dfb-4a25-85b8-bed37ce3aa9b",
+        "9906680a-ee67-432c-9460-e191a322a3b4",
+        "22c3bf7d-b2c9-40b8-8077-335ee05d60d2",
+        "3e95fdd2-3663-4b9e-bdf6-e120449d3ac6",
+        "2ecffca9-cc78-4900-a64d-b95ff4a0eb96",
+        "e812482b-533e-48d9-9727-0b4a1a66e99d",
+        "953a6906-a7b0-40e8-a878-90c9397209a5",
+        "78f7c7eb-5726-4673-83fc-431f18af8a1c",
+        "f9a3a729-173f-49a9-ab6f-72ea2ec70dba"
+      ],
+      "id": 7,
+      "hasQuestions": true
+    },
+    {
+      "Subject": "chapiter 2",
+      "type": "Child",
+      "ArrayOfChilds": [],
+      "id": 8
+    },
+    {
+      "Subject": "analyse",
+      "type": "Child",
+      "ArrayOfChilds": [],
+      "id": 9
+    },
+    {
+      "Subject": "atomistique",
+      "type": "Child",
+      "ArrayOfChilds": [
+        12,
+        13
+      ],
+      "id": 10
+    },
+    {
+      "Subject": "atomistique",
+      "type": "Child",
+      "ArrayOfChilds": [],
+      "id": 11
+    },
+    {
+      "Subject": "chapiter 1",
+      "type": "Child",
+      "ArrayOfChilds": [],
+      "id": 12
+    },
+    {
+      "Subject": "chapiter 2",
+      "type": "Child",
+      "ArrayOfChilds": [],
+      "id": 13
+    },
+    {
+      "Subject": "full Stack Js",
+      "type": "Child",
+      "ArrayOfChilds": [
+        17,
+        18,
+        19
+      ],
+      "id": 14
+    },
+    {
+      "Subject": "full Stack Java",
+      "type": "Child",
+      "ArrayOfChilds": [
+        20
+      ],
+      "id": 15
+    },
+    {
+      "Subject": "full stack C#",
+      "type": "Child",
+      "ArrayOfChilds": [
+        21
+      ],
+      "id": 16
+    },
+    {
+      "Subject": "Learn js",
+      "type": "Child",
+      "ArrayOfChilds": [
+        22,
+        23
+      ],
+      "id": 17
+    },
+    {
+      "Subject": "Learn Uml",
+      "type": "Child",
+      "ArrayOfChilds": [
+        24
+      ],
+      "id": 18
+    },
+    {
+      "Subject": "Learn Node js",
+      "type": "Child",
+      "ArrayOfChilds": [
+        25
+      ],
+      "id": 19
+    },
+    {
+      "Subject": "Spring boot",
+      "type": "Child",
+      "ArrayOfChilds": [
+        26
+      ],
+      "id": 20
+    },
+    {
+      "Subject": "Learn Unity",
+      "type": "Child",
+      "ArrayOfChilds": [
+        27
+      ],
+      "id": 21
+    },
+    {
+      "Subject": "chapiter 1",
+      "type": "Child",
+      "ArrayOfChilds": [],
+      "id": 22
+    },
+    {
+      "Subject": "chapiter 2",
+      "type": "Child",
+      "ArrayOfChilds": [],
+      "id": 23
+    },
+    {
+      "Subject": "chapiter 1",
+      "type": "Child",
+      "ArrayOfChilds": [],
+      "id": 24
+    },
+    {
+      "Subject": "chapiter 1",
+      "type": "Child",
+      "ArrayOfChilds": [],
+      "id": 25
+    },
+    {
+      "Subject": "chapiter 1",
+      "type": "Child",
+      "ArrayOfChilds": [],
+      "id": 26
+    },
+    {
+      "Subject": "chapiter 1",
+      "type": "Child",
+      "ArrayOfChilds": [],
+      "id": 27
+    }
+  ]
 }
