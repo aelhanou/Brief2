@@ -20,6 +20,7 @@ class Login {
         let users = await resp.json()
         users.map(e => {
             if (e.email == this.email && e.password == this.password) {
+                localStorage.setItem(e.fullName,e.id)
                 window.location.href = "dashboard.html"
                 Verified = true
             }

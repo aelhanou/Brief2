@@ -89,7 +89,7 @@ class AddSubjects {
                             </div>
                             `
         })
-        console.log(childs);
+        
     }
     addChildsToParent = async (ParentSub, InputValue, Child) => {
         let child = await this.addSubjects(InputValue, Child)

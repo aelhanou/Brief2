@@ -69,7 +69,6 @@ class Register {
             })
         })
         let data = await resp.json()
-            localStorage.setItem(data.fullName,data.id)
         if (data) {
             window.location.href = "login.html"
         }

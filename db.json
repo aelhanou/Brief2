@@ -13,13 +13,6 @@
       "fullName": "Ryozaki L",
       "speciality": "Detective",
       "id": 2
-    },
-    {
-      "email": "youcode@fmail.com",
-      "password": "123",
-      "fullName": "Youcode Safi",
-      "speciality": "Ecole",
-      "id": 3
     }
   ],
   "Student": [],
@@ -79,7 +72,30 @@
       "id": "f9a3a729-173f-49a9-ab6f-72ea2ec70dba"
     }
   ],
-  "Answers": [],
+  "Answers": [
+    {
+      "id": "d5d4a80f-d0a9-466e-b05e-c7e82f863625",
+      "QuestionId": "dda3a4bd-3dfb-4a25-85b8-bed37ce3aa9b",
+      "AnswersPossible": [
+        {
+          "answer": "5",
+          "status": true
+        },
+        {
+          "answer": "6",
+          "status": false
+        },
+        {
+          "answer": "1",
+          "status": false
+        },
+        {
+          "answer": "1 + 4",
+          "status": true
+        }
+      ]
+    }
+  ],
   "Level": [],
   "History": [],
   "Test": [],
