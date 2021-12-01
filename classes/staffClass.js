@@ -1,15 +1,22 @@
 
-const Submitregister = document.getElementById('Register')
-const Submitlogin = document.getElementById('Submitlogin')
 
 
 class Staff {
 
-    addStaff(email, password, FullName, speciality)
-    login(email,password)
+    register(email, password, FullName, speciality) {
+        addStaff(email,password,FullName,speciality);
+        
+    }
+    singnin(email, password){
+        login(email,password)
+    }
 
 
 }
+
+let Submitregister = document.querySelector('#Register')
+let Submitlogin = document.querySelector('#Submitlogin')
+
 
 Submitregister.onclick = () => {
 
@@ -19,7 +26,7 @@ Submitregister.onclick = () => {
     const password = document.getElementById('password')
 
     let register = new Staff()
-    register.addStaff(email.value, password.value, FullName.value, speciality.value)
+    register.register(email.value, password.value, FullName.value, speciality.value)
 
 }
 
@@ -28,7 +35,6 @@ Submitlogin.onclick = () => {
     const email = document.getElementById('email')
     const password = document.getElementById('password')
     let login = new Staff
-    login.login(email.value, password.value)
+    login.singnin(email.value, password.value)
 
 }
-
