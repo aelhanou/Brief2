@@ -125,10 +125,18 @@
                     <h1 class="h-60 w-full flex justify-center items-center text-4xl">Add Level</h1>
                    <div class="flex flex-col items-center gap-6">
                        <div class="flex flex-col gap-3">
-                        <input  type="text" class="start outline text-white font-bold py-2 px-4 rounded   transition duration-500 ease-in-out bg-black hover:bg-gray-300 hover:text-white transform hover:-translate-y-0 hover:scale-110" style="width: 400px;height: 60px;" placeholder="Enter Your Question">
-                        <input  type="text" class="start outline text-white font-bold py-2 px-4 rounded   transition duration-500 ease-in-out bg-black hover:bg-gray-300 hover:text-white transform hover:-translate-y-0 hover:scale-110" style="width: 400px;height: 60px;" placeholder="Enter Your Score">
+                        <input  type="text" id="LevelType" class="start outline text-white font-bold py-2 px-4 rounded   transition duration-500 ease-in-out bg-black hover:bg-gray-300 hover:text-white transform hover:-translate-y-0 hover:scale-110" style="width: 400px;height: 60px;" placeholder="Enter Level">
+                        <input  type="text" id="MinLevel" class="start outline text-white font-bold py-2 px-4 rounded   transition duration-500 ease-in-out bg-black hover:bg-gray-300 hover:text-white transform hover:-translate-y-0 hover:scale-110" style="width: 400px;height: 60px;" placeholder="Enter Min Score">
+                        <input  type="text" id="MaxLevel" class="start outline text-white font-bold py-2 px-4 rounded   transition duration-500 ease-in-out bg-black hover:bg-gray-300 hover:text-white transform hover:-translate-y-0 hover:scale-110" style="width: 400px;height: 60px;" placeholder="Enter Max Score">
                        </div>
                        <button id="SubmitLvl" class="start text-white font-bold py-2 px-4 rounded  transition duration-500 ease-in-out bg-black hover:bg-black hover:text-white transform hover:-translate-y-0 hover:scale-110" >Send</button>
+                    </div>
+
+                    <div class="DisplayLevel flex flex-col justify-center items-center gap-2 text-xl w-full bg-black text-white  h-32 mt-3">
+
+                    </div>
+                    <div id="DisplayScore">
+
                     </div>
                 </div>
                 <div class="Choices flex flex-col" dataset="Formatuer" style="display: none; width: 100%;height: 100%;">
@@ -141,6 +149,7 @@
                     <h1 class="h-60 w-full flex justify-center items-center text-4xl">Profile</h1>
                    <div class="DisProfile flex flex-col items-center gap-10 text-2xl w-full bg-black text-white h-64 justify-center ">
                     </div>
+                    
                 </div>
             </div>
         </div>
@@ -151,6 +160,7 @@
     <script  src="./AddQuestions.js"></script>
     <script src="./Register.js"></script>
     <script src="./dashboard.js"></script>
+    <script src="./AddLevel.js"></script>
 
 </body>
 </html>

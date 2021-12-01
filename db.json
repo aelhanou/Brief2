@@ -70,6 +70,12 @@
       "Score": "10",
       "type": "Question",
       "id": "f9a3a729-173f-49a9-ab6f-72ea2ec70dba"
+    },
+    {
+      "Question": "what is atom?",
+      "Score": "10",
+      "type": "Question",
+      "id": "717b2cd0-f957-49d0-81c6-e4ee8b2a3f1e"
     }
   ],
   "Answers": [
@@ -94,9 +100,42 @@
           "status": true
         }
       ]
+    },
+    {
+      "id": "c55b8df0-b843-419e-9edd-8b2114c914c3",
+      "QuestionId": "717b2cd0-f957-49d0-81c6-e4ee8b2a3f1e",
+      "AnswersPossible": [
+        {
+          "answer": "atom",
+          "status": true
+        },
+        {
+          "answer": "electron",
+          "status": false
+        }
+      ]
     }
   ],
-  "Level": [],
+  "Level": [
+    {
+      "type": "easy",
+      "minScore": "200",
+      "maxScore": "300",
+      "id": 1
+    },
+    {
+      "type": "medium",
+      "minScore": "400",
+      "maxScore": "600",
+      "id": 2
+    },
+    {
+      "type": "hard",
+      "minScore": "700",
+      "maxScore": "1000",
+      "id": 3
+    }
+  ],
   "History": [],
   "Test": [],
   "Subjects": [
@@ -307,6 +346,53 @@
       "type": "Child",
       "ArrayOfChilds": [],
       "id": 27
+    },
+    {
+      "Subject": "mecanique",
+      "type": "Parent",
+      "ArrayOfChilds": [
+        29
+      ],
+      "id": 28
+    },
+    {
+      "Subject": "thermo",
+      "type": "Child",
+      "ArrayOfChilds": [
+        30
+      ],
+      "id": 29
+    },
+    {
+      "Subject": "atom",
+      "type": "Child",
+      "ArrayOfChilds": [
+        "717b2cd0-f957-49d0-81c6-e4ee8b2a3f1e"
+      ],
+      "id": 30,
+      "hasQuestions": true
+    },
+    {
+      "Subject": "choaib",
+      "type": "Parent",
+      "ArrayOfChilds": [
+        32
+      ],
+      "id": 31
+    },
+    {
+      "Subject": "anas",
+      "type": "Child",
+      "ArrayOfChilds": [
+        33
+      ],
+      "id": 32
+    },
+    {
+      "Subject": "anas",
+      "type": "Child",
+      "ArrayOfChilds": [],
+      "id": 33
     }
   ]
 }
