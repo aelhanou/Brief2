@@ -75,6 +75,7 @@ class AddSubjects {
         let childs = data.ArrayOfChilds.map(e => {
             return this.ParentSubjects.find(subject => e == subject.id)
         })
+        
 
         DisplaySub.innerHTML = ""
         DisplaySub.style.display = "block"

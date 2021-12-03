@@ -6,13 +6,6 @@
       "fullName": "azeddinezer0",
       "speciality": "math",
       "id": 1
-    },
-    {
-      "email": "ryozakiazeddine@gmail.com",
-      "password": "123",
-      "fullName": "Ryozaki L",
-      "speciality": "Detective",
-      "id": 2
     }
   ],
   "Student": [],
@@ -33,7 +26,8 @@
       "Question": "4 + 4",
       "Score": "12",
       "type": "Question",
-      "id": "22c3bf7d-b2c9-40b8-8077-335ee05d60d2"
+      "id": "22c3bf7d-b2c9-40b8-8077-335ee05d60d2",
+      "level": "medium"
     },
     {
       "Question": "safas",
@@ -76,6 +70,36 @@
       "Score": "10",
       "type": "Question",
       "id": "717b2cd0-f957-49d0-81c6-e4ee8b2a3f1e"
+    },
+    {
+      "Question": "what is islam?",
+      "Score": "100",
+      "type": "Question",
+      "id": "0f9b0f57-972c-4d46-af31-512de164f5e0"
+    },
+    {
+      "Question": "what is Messengers?",
+      "Score": "30",
+      "type": "Question",
+      "id": "06ec1991-7e4d-48e9-8249-3a6d0fe97f87"
+    },
+    {
+      "Question": "what is atom?",
+      "Score": "200",
+      "type": "Question",
+      "id": "c003f602-aa05-47f4-b0be-af7f10106d9b"
+    },
+    {
+      "Question": "3 + 6",
+      "Score": "12",
+      "type": "Question",
+      "id": "2953407f-de2e-4ed8-bace-e1594d18f89f"
+    },
+    {
+      "Question": "3 + 6",
+      "Score": "12",
+      "type": "Question",
+      "id": "b6855bab-83aa-46f9-9ef2-1a1adb9f0a8e"
     }
   ],
   "Answers": [
@@ -114,13 +138,185 @@
           "status": false
         }
       ]
+    },
+    {
+      "id": "df82ae61-b503-4712-80f9-e40e02d9f1e4",
+      "QuestionId": "0f9b0f57-972c-4d46-af31-512de164f5e0",
+      "AnswersPossible": [
+        {
+          "answer": "islam",
+          "status": true
+        },
+        {
+          "answer": "boda",
+          "status": false
+        },
+        {
+          "answer": "masi7",
+          "status": false
+        }
+      ]
+    },
+    {
+      "id": "d41e5085-7ff6-4c34-bec8-ca8bdd4e3b97",
+      "QuestionId": "c003f602-aa05-47f4-b0be-af7f10106d9b",
+      "AnswersPossible": [
+        {
+          "answer": "idk",
+          "status": true
+        },
+        {
+          "answer": "yo",
+          "status": false
+        }
+      ]
+    },
+    {
+      "id": "b7b5b717-9933-4a55-90ca-578074e9dff6",
+      "QuestionId": "06ec1991-7e4d-48e9-8249-3a6d0fe97f87",
+      "AnswersPossible": [
+        {
+          "answer": "10",
+          "status": false
+        },
+        {
+          "answer": "",
+          "status": false
+        }
+      ]
+    },
+    {
+      "id": "ea699ea1-e7ed-4f65-8acd-9856c797c6b8",
+      "QuestionId": "dda3a4bd-3dfb-4a25-85b8-bed37ce3aa9b",
+      "AnswersPossible": [
+        {
+          "answer": "3 + 2",
+          "status": true
+        },
+        {
+          "answer": "1",
+          "status": false
+        },
+        {
+          "answer": "5",
+          "status": true
+        }
+      ]
+    },
+    {
+      "id": "aa224d2d-b3bf-4199-8711-8b771f16a0c8",
+      "QuestionId": "9906680a-ee67-432c-9460-e191a322a3b4",
+      "AnswersPossible": [
+        {
+          "answer": "3",
+          "status": false
+        },
+        {
+          "answer": "",
+          "status": false
+        },
+        {
+          "answer": "",
+          "status": false
+        }
+      ]
+    },
+    {
+      "id": "6f282776-a569-4ba0-bdf2-8b1bdfbefb7f",
+      "QuestionId": "b6855bab-83aa-46f9-9ef2-1a1adb9f0a8e",
+      "AnswersPossible": [
+        {
+          "answer": "4",
+          "status": false
+        },
+        {
+          "answer": "",
+          "status": false
+        },
+        {
+          "answer": "",
+          "status": false
+        }
+      ]
+    },
+    {
+      "id": "ea489ac9-a979-437d-a076-b681fdcf8c68",
+      "QuestionId": "dda3a4bd-3dfb-4a25-85b8-bed37ce3aa9b",
+      "AnswersPossible": [
+        {
+          "answer": "4",
+          "status": false
+        },
+        {
+          "answer": "",
+          "status": false
+        },
+        {
+          "answer": "",
+          "status": false
+        }
+      ]
+    },
+    {
+      "id": "46c46a8a-a264-4277-8f89-55ab4600e7a2",
+      "QuestionId": "dda3a4bd-3dfb-4a25-85b8-bed37ce3aa9b",
+      "AnswersPossible": [
+        {
+          "answer": "2",
+          "status": false
+        },
+        {
+          "answer": "",
+          "status": false
+        },
+        {
+          "answer": "",
+          "status": false
+        }
+      ]
+    },
+    {
+      "id": "ade0e012-79a1-416a-b74a-723c09c54d9c",
+      "QuestionId": "22c3bf7d-b2c9-40b8-8077-335ee05d60d2",
+      "AnswersPossible": [
+        {
+          "answer": "5555",
+          "status": false
+        },
+        {
+          "answer": "123",
+          "status": true
+        },
+        {
+          "answer": "122 + 1",
+          "status": true
+        }
+      ]
+    },
+    {
+      "id": "663d6cfa-f522-4f52-a322-4f6548cd7e26",
+      "QuestionId": "22c3bf7d-b2c9-40b8-8077-335ee05d60d2",
+      "AnswersPossible": [
+        {
+          "answer": "5555",
+          "status": false
+        },
+        {
+          "answer": "123",
+          "status": true
+        },
+        {
+          "answer": "122 + 1",
+          "status": true
+        }
+      ]
     }
   ],
   "Level": [
     {
       "type": "easy",
-      "minScore": "200",
-      "maxScore": "300",
+      "minScore": "300",
+      "maxScore": "400",
       "id": 1
     },
     {
@@ -154,8 +350,7 @@
       "ArrayOfChilds": [
         10
       ],
-      "id": 2,
-      "hasQuestions": true
+      "id": 2
     },
     {
       "Subject": "Info",
@@ -200,7 +395,8 @@
         "e812482b-533e-48d9-9727-0b4a1a66e99d",
         "953a6906-a7b0-40e8-a878-90c9397209a5",
         "78f7c7eb-5726-4673-83fc-431f18af8a1c",
-        "f9a3a729-173f-49a9-ab6f-72ea2ec70dba"
+        "f9a3a729-173f-49a9-ab6f-72ea2ec70dba",
+        "b6855bab-83aa-46f9-9ef2-1a1adb9f0a8e"
       ],
       "id": 7,
       "hasQuestions": true
@@ -225,12 +421,6 @@
         13
       ],
       "id": 10
-    },
-    {
-      "Subject": "atomistique",
-      "type": "Child",
-      "ArrayOfChilds": [],
-      "id": 11
     },
     {
       "Subject": "chapiter 1",
@@ -393,6 +583,32 @@
       "type": "Child",
       "ArrayOfChilds": [],
       "id": 33
+    },
+    {
+      "Subject": "education islamique",
+      "type": "Parent",
+      "ArrayOfChilds": [
+        35,
+        36
+      ],
+      "id": 34
+    },
+    {
+      "Subject": "",
+      "type": "Child",
+      "ArrayOfChilds": [],
+      "id": 35
+    },
+    {
+      "Subject": "islam",
+      "type": "Child",
+      "ArrayOfChilds": [
+        "0f9b0f57-972c-4d46-af31-512de164f5e0",
+        "06ec1991-7e4d-48e9-8249-3a6d0fe97f87",
+        "c003f602-aa05-47f4-b0be-af7f10106d9b"
+      ],
+      "id": 36,
+      "hasQuestions": true
     }
   ]
 }

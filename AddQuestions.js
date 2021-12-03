@@ -67,7 +67,7 @@ class AddQuestions extends AddSubjects {
 
         DisplayQst.style.display = "block"
         DisplayQst.classList.add("ChooseParent", "overflow-y-scroll", "overflow-x-hidden", "h-64", "flex", "gap-2", "mt-2", "w-full", "bg-black", "text-white")
-
+        console.log(childs);
         data.hasQuestions ?
             childs.map(({
                 id,
@@ -162,6 +162,7 @@ SubmitQst.addEventListener("click", async () => {
 
 class AddAnswers {
 
+
     SetAnswer = (id) => {
         DisplayAnsw.style.display = "block"
         this.GlobalId = id
@@ -173,7 +174,7 @@ class AddAnswers {
         this.makeInputAnswer(nbr)
     }
 
-    makeInputAnswer = (nbr) => {
+    makeInputAnswer = async (nbr) => {
         DisplayAnsw.innerHTML = ""
         DisplayAnsw.innerHTML = "<h1 class='w-full text-center text-2xl'>Add Answers: </h1>"
         let div = document.createElement('div')
@@ -195,12 +196,51 @@ class AddAnswers {
             divAnswerWithCheckBox.appendChild(inputCheckBox)
             div.appendChild(span)
             div.appendChild(divAnswerWithCheckBox)
-
         }
+        let level = document.createElement('div')
+        let Levels = await objLvl.getAllLevel()
+        console.log(Levels);
+        level.setAttribute("class","w-full flex flex-col justify-center item-center")
+        Levels.map(e=>{
+        level.innerHTML += `
+            <button onclick="objAnswer.getIdLevel('${e.type}')" class="lvlChoose w-full bg-white text-black hover:bg-black hover:text-white"  >
+                Level : ${e.type}
+            </button>
 
+         `
+        })
+        
         divBtn.innerHTML += `<button id='SubmitAnswersInput' onclick="objAnswer.getAllAnswersFromInput()" class='  inputNbr start text-white font-bold py-2 px-4 rounded  transition duration-500 ease-in-out bg-black hover:bg-black hover:text-white transform hover:-translate-y-0 hover:scale-100' >Send</button>`
+        DisplayAnsw.appendChild(level)
         DisplayAnsw.appendChild(div)
         DisplayAnsw.appendChild(divBtn)
+
+    }
+
+
+    getIdLevel = (type) =>{
+        console.log(type);
+        this.type = type
+    }
+
+    addLevelToQuestion = async () =>{
+        let resp = await fetch(`http://localhost:4000/Questions/${this.GlobalId}`,{
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json",
+            }
+        })
+        let data = await resp.json()
+        let respLvl = await fetch(`http://localhost:4000/Questions/${this.GlobalId}`,{
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body : JSON.stringify({...data,"level":  this.type})
+        })
+        let dataLevl = await respLvl.json()
+
+        console.log(dataLevl);
 
     }
 
@@ -223,7 +263,7 @@ class AddAnswers {
         let InputCheckBox = document.querySelectorAll('.InputCheckBox')
         let uuid = self.crypto.randomUUID();
 
-
+        console.log(this.GlobalId);
         let resp = await fetch("http://localhost:4000/Answers", {
             method: "POST",
             headers: {
@@ -231,13 +271,13 @@ class AddAnswers {
             },
             body: JSON.stringify({
                 "id": uuid,
-                "QuestionId":this.GlobalId,
+                "QuestionId": this.GlobalId,
                 "AnswersPossible":obj
             }),
         })
         let Data = await resp.json()
         DisplayAnsw.style.display = "none"
-
+        this.addLevelToQuestion()
         Array.from(inputAnswer).map(e => e.value = '')
         Array.from(InputCheckBox).map(e => e.checked = false)
     }
