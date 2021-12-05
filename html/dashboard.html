@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" integrity="sha512-wnea99uKIC3TJF7v4eKk4Y+lMz2Mklv18+r4na2Gn1abDRPPOeef95xTzdwGD9e6zXJBteMIhZ1+68QC5byJZw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script type="module" src="../classes/index.js"></script>
     <title>Dashboard</title>
 </head>
 <body>
@@ -29,9 +30,6 @@
                 </div>
                 <div id="Subject" class="add text-black font-bold py-2 px-4 rounded w-60 transition text-center duration-500 ease-in-out bg-white hover:bg-black hover:text-white transform hover:-translate-y-0 hover:scale-105 h-10" >
                     Add Subjects
-                </div>
-                <div id="Answers" class="add text-black font-bold py-2 px-4 rounded w-60 transition text-center duration-500 ease-in-out bg-white hover:bg-black hover:text-white transform hover:-translate-y-0 hover:scale-105 h-10" >
-                    Add Answers
                 </div>
                 <div id="Test" class="add text-black font-bold py-2 px-4 rounded w-60 transition text-center duration-500 ease-in-out bg-white hover:bg-black hover:text-white transform hover:-translate-y-0 hover:scale-105 h-10" >
                     Add Test
@@ -61,7 +59,7 @@
                     </div>
                     <div id="DisplayAnsw" style="width: 72%;height: 80%" class="flex flex-col  absolute top-36  z-50 bg-gray-400 text-white " >
                         <div class="w-[100%] flex justify-end mr-2 mt-2">
-                            <img id="CloseAnswer" src="./images/cancel.png" width="20px" height="20px" alt="">
+                            <img id="CloseAnswer" src="../images/cancel.png" width="20px" height="20px" alt="">
                         </div>
                         <div class="w-full flex flex-col gap-3 justify-center items-center">
                             <h1 class="inputNbr text-2xl">Add Answers : </h1>
@@ -100,16 +98,6 @@
 
                    </div>
                    
-                </div>
-                <div class="Choices flex flex-col" dataset="Answers" style="display: none; width: 100%;height: 100%;" >
-                    <h1 class="h-60 w-full flex justify-center items-center text-4xl">Add Answer</h1>
-                   <div class="flex flex-col items-center gap-6">
-                       <div class="flex flex-col gap-3">
-                        <input  type="text" class="start outline text-white font-bold py-2 px-4 rounded   transition duration-500 ease-in-out bg-black hover:bg-gray-300 hover:text-white transform hover:-translate-y-0 hover:scale-110" style="width: 400px;height: 60px;" placeholder="Enter Your Question">
-                        <input  type="text" class="start outline text-white font-bold py-2 px-4 rounded   transition duration-500 ease-in-out bg-black hover:bg-gray-300 hover:text-white transform hover:-translate-y-0 hover:scale-110" style="width: 400px;height: 60px;" placeholder="Enter Your Score">
-                       </div>
-                       <button id="SubmitAns" class="start text-white font-bold py-2 px-4 rounded  transition duration-500 ease-in-out bg-black hover:bg-black hover:text-white transform hover:-translate-y-0 hover:scale-110" >Send</button>
-                   </div>
                 </div>
                 <div class="Choices flex flex-col" dataset="Test" style="display: none; width: 100%;height: 100%;">
                     <h1 class="h-60 w-full flex justify-center items-center text-4xl">Add Test</h1>
@@ -156,11 +144,14 @@
     </div>
 
 
-    <script   src="./AddSubjects.js"></script>
-    <script src="./AddLevel.js"></script>
-    <script  src="./AddQuestions.js"></script>
-    <script src="./Register.js"></script>
-    <script src="./dashboard.js"></script>
+
+    <script type="module" src="../classes/index.js"></script>
+    <!-- <script  type="module" src="../classes/AddQuestions.js"></script>
+
+    <script   type="module" src="../classes/AddSubjects.js"></script>
+    <script type="module" src="../classes/AddLevel.js"></script>
+    <script type="module" src="../classes/Register.js"></script>
+    <script type="module" src="../classes/dashboard.js"></script> -->
 
 </body>
 </html>

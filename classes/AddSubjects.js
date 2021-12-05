@@ -11,7 +11,7 @@ let IdOfParentSub = -1
 let GlobalDataForChildSub = ''
 
 
-class AddSubjects {
+export class AddSubjects {
     dataGlobal = []
     ParentSubjects = []
     display = () => {
@@ -69,26 +69,31 @@ class AddSubjects {
         // GlobalDataForChildSub = data
         return data
     }
-    getParent = async (e) => {
+    getParent = (e) => {
+        console.log(e);
         IdOfParentSub = e
+        console.log(e);
         let data = this.ParentSubjects.find(subject => e == subject.id)
         let childs = data.ArrayOfChilds.map(e => {
             return this.ParentSubjects.find(subject => e == subject.id)
         })
         
-
+        console.log(this.ParentSubjects);
+        console.log(childs);
         DisplaySub.innerHTML = ""
         DisplaySub.style.display = "block"
         DisplaySub.classList.add("ChooseParent", "overflow-y-scroll", "overflow-x-hidden", "h-64", "flex", "gap-2", "mt-2", "w-full", "bg-black", "text-white")
+        DisplaySub.innerHTML = `<h3>Subject of ${data.Subject} :</h3>`
         childs.map(e => {
-            DisplaySub.innerHTML += `
-                            <h3> subjects of ${data.Subject} :</h3>
-                            <div onclick="obj.getParent(${e.id})" id="${e.id}" class="ChooseParent justify-evenly flex">               
+           if(e){ 
+           DisplaySub.innerHTML += `
+                            <div  onclick="objclick(${e.id})" id="${e.id}" class="ChooseParent justify-evenly flex">               
                                     <div>id : ${e.id}</div>
                                     <div>Subject : ${e.Subject}</div>
                                     <div>type : ${e.type}</div>
                             </div>
                             `
+        }
         })
 
     }
@@ -119,8 +124,8 @@ class AddSubjects {
 
 
 let obj = new AddSubjects()
-obj.display()
-obj.getAllSubjects()
+// obj.display()
+// obj.getAllSubjects()
 
 
 SubmitTypeOfSub.addEventListener("click", async () => {
@@ -138,7 +143,7 @@ SubmitTypeOfSub.addEventListener("click", async () => {
             DisplaySub.classList.add("ChooseParent", "overflow-y-scroll", "overflow-x-hidden", "h-64", "flex", "gap-2", "mt-2", "w-full", "bg-black", "text-white")
             ParentSubject.map(e => {
                 DisplaySub.innerHTML += `
-                            <div onclick="obj.getParent(${e.id})" id="${e.id}" class="ChooseParent justify-evenly flex">               
+                            <div id="${e.id}" onclick="objclick(${e.id})" class="ChooseParent justify-evenly flex">               
                                     <div>id : ${e.id}</div>
                                     <div>Subject : ${e.Subject}</div>
                                     <div>type : ${e.type}</div>
@@ -151,6 +156,8 @@ SubmitTypeOfSub.addEventListener("click", async () => {
 })
 
 
+const ChooseParent = document.querySelectorAll('.ChooseParent')
+
 
 SubmitSub.addEventListener("click", async (event) => {
     if (Parent == "Parent") {
@@ -162,8 +169,9 @@ SubmitSub.addEventListener("click", async (event) => {
         if (IdOfParentSub != -1) {
 
             obj.addChildsToParent(IdOfParentSub, inputSubject.value, Child)
+        
         }
-    }
+    }   
 
 
 })

@@ -1,3 +1,4 @@
+import { Register } from "./index.js"
 const btnLogin = document.querySelector('#btnLogin')
 const btnRegister = document.querySelector('#btnRegister')
 const btnLogout = document.querySelector('#btnLogout')
@@ -6,15 +7,11 @@ const DisProfile = document.querySelector('.DisProfile')
 
 
 
-class Dashboard extends Register {
-
+export class Dashboard extends Register {
 
     isLogined = async () => {
         let formateurs = await this.getAllFormateurs()
-        let [{
-            id,
-            fullName
-        }] = this.isInLocalStorage()
+        let [{id,fullName}] = this.isInLocalStorage()
         if (id && fullName) {
             btnLogin.style.display = "none"
             btnRegister.style.display = "none"
@@ -87,8 +84,8 @@ class Dashboard extends Register {
 
 
 
-let objDashboard = new Dashboard()
-objDashboard.isLogined()
+// let objDashboard = new Dashboard()
+// objDashboard.isLogined()
 
 
 

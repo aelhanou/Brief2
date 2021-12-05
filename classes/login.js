@@ -2,7 +2,7 @@ const Submitlogin = document.getElementById('Submitlogin')
 const email = document.getElementById('email')
 const password = document.getElementById('password')
 
-class Login {
+export class Login {
 
     constructor(email, password) {
         this.email = email
@@ -35,7 +35,7 @@ class Login {
 }
 
 
-Submitlogin.addEventListener("click", async () => {
+Submitlogin && Submitlogin.addEventListener("click", async () => {
     let obj = new Login(email.value, password.value)
     obj.login()
 })

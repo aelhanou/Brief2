@@ -8,7 +8,7 @@ const DisScore = document.querySelector('#DisplayScore')
 
 
 
-class AddLevel {
+export class AddLevel {
 
 
     constructor(obj) {
@@ -63,7 +63,7 @@ class AddLevel {
             maxScore
         }) => {
             DisplayLevel.innerHTML += `
-                <button onclick="objLvl.displayScore(${id})" id="${id}" class="w-full bg-white text-black" >Type: ${type}</button>
+                <button onclick="displayScore(${id})" id="${id}" class="w-full bg-white text-black" >Type: ${type}</button>
             `
         })
     }
@@ -88,7 +88,7 @@ class AddLevel {
                 <input type="text" value="${maxScore}" placeholder="MaxScore" class="inputMax w-full start outline text-white font-bold py-2 px-4 rounded   transition duration-500 ease-in-out bg-black text-center transform hover:-translate-y-0 hover:scale-100" style="height: 60px;" >
             </div>
             <div class="w-full flex mt-3 justify-center">
-                <button id="updateLevel" onclick="objLvl.updateLevel(${id})" class="start text-white font-bold py-2 px-4 rounded  transition duration-500 ease-in-out bg-black hover:bg-black hover:text-white transform hover:-translate-y-0 hover:scale-110" >Send</button>
+                <button id="updateLevel" onclick="addLevel(${id})" class="start text-white font-bold py-2 px-4 rounded  transition duration-500 ease-in-out bg-black hover:bg-black hover:text-white transform hover:-translate-y-0 hover:scale-110" >Update</button>
             </div>
         `
 
@@ -119,7 +119,7 @@ class AddLevel {
 
 let objLvl = new AddLevel({})
 
-objLvl.getAllLevel()
+// objLvl.getAllLevel()
 
 
 

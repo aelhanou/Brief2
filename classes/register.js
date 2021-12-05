@@ -5,7 +5,7 @@ const email = document.getElementById('email')
 const password = document.getElementById('password')
 const users = document.querySelector('.users')
 
-class Register {
+export class Register {
     constructor(email, password, FullName, speciality) {
         this.email = email;
         this.password = password;
@@ -77,9 +77,9 @@ class Register {
 
 }
 
-let ObjRegister = new Register()
+// let ObjRegister = new Register()
 
-ObjRegister.getAllFormateurs()
+// ObjRegister.getAllFormateurs()
 
 Submitregister && Submitregister.addEventListener("click", async () => {
     let obj = new Register(email.value, password.value, FullName.value, speciality.value)

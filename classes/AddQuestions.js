@@ -1,3 +1,4 @@
+import { AddSubjects,AddLevel } from "./index.js"
 const SubmitQst = document.querySelector('#SubmitQst')
 const AddScore = document.querySelector('#AddScore')
 const AddQuestion = document.querySelector('#AddQuestion')
@@ -7,7 +8,7 @@ const SubmitInputCount = document.querySelector('#SubmitInputCount')
 const NumberOfInputs = document.querySelector('#NumberOfInputs')
 const inputNbr = document.querySelectorAll('.inputNbr')
 const CloseAnswer = document.querySelector('#CloseAnswer')
-
+let IdOfParentQst = -1
 let subData = []
 let subjects = []
 
@@ -15,7 +16,10 @@ let subjects = []
 
 
 
-class AddQuestions extends AddSubjects {
+
+
+
+ export class AddQuestions extends AddSubjects {
 
     ParentQuestions = []
     DisplaySub = async () => {
@@ -57,7 +61,7 @@ class AddQuestions extends AddSubjects {
     }
 
     getParent = async (e) => {
-        IdOfParentSub = e
+        IdOfParentQst = e
 
         let data = this.ParentSubjects.find(subject => e == subject.id)
         let childs = data.ArrayOfChilds.map(e => {
@@ -76,7 +80,7 @@ class AddQuestions extends AddSubjects {
             }) => {
                 DisplayQst.innerHTML += `
                             
-                            <div  id="${id}" onclick="objAnswer.SetAnswer('${id}')" class="ChooseParent justify-evenly flex">               
+                            <div  id="${id}" onclick="setAnswers('${id}')" class="ChooseParent justify-evenly flex">               
                                     <div>Question : ${Question}</div>
                                     <div>type : ${type}</div>
                             </div>
@@ -89,7 +93,7 @@ class AddQuestions extends AddSubjects {
             }) => {
                 DisplayQst.innerHTML += `
                             
-                            <div onclick="obj1.getParent(${id})" id="${id}" class="ChooseParent justify-evenly flex">               
+                            <div onclick="obj1click(${id})" id="${id}" class="ChooseParent justify-evenly flex">               
                                     <div>Subject : ${Subject}</div>
                                     <div>type : ${type}</div>
                             </div>
@@ -106,7 +110,7 @@ class AddQuestions extends AddSubjects {
         DisplayQst.classList.add("ChooseParent", "overflow-y-scroll", "overflow-x-hidden", "h-64", "flex", "gap-2", "mt-2", "w-full", "bg-black", "text-white")
         ParentSubject.map(e => {
             DisplayQst.innerHTML += `
-                <div onclick="obj1.getParent(${e.id})" id="${e.id}" class="ChooseParent justify-evenly flex">               
+                <div onclick="obj1click(${e.id})" id="${e.id}" class="ChooseParent justify-evenly flex">               
                         <div>id : ${e.id}</div>
                         <div>Subject : ${e.Subject}</div>
                         <div>type : ${e.type}</div>
@@ -131,13 +135,16 @@ class AddQuestions extends AddSubjects {
         let Data = await resp.json()
         await this.getAllSubjects()
         await this.getAllQuestions()
-        await this.getParent(IdOfParentSub)
+        await this.getParent(IdOfParentQst)
     }
 }
 
+
 let obj1 = new AddQuestions()
-obj1.DisplaySub()
-obj1.getAllQuestions()
+
+export {obj1}
+// obj1.DisplaySub()
+// obj1.getAllQuestions()
 
 
 
@@ -146,8 +153,9 @@ obj1.getAllQuestions()
 
 
 SubmitQst.addEventListener("click", async () => {
-
-    obj1.addQuestionsInChild(IdOfParentSub, AddQuestion.value, AddScore.value)
+    // Subjects Object
+let obj1 = new AddSubjects()
+    obj1.addQuestionsInChild(IdOfParentQst, AddQuestion.value, AddScore.value)
 })
 
 
@@ -160,7 +168,7 @@ SubmitQst.addEventListener("click", async () => {
 
 
 
-class AddAnswers {
+export class AddAnswers {
 
 
     SetAnswer = (id) => {
@@ -203,14 +211,14 @@ class AddAnswers {
         level.setAttribute("class","w-full flex flex-col justify-center item-center")
         Levels.map(e=>{
         level.innerHTML += `
-            <button onclick="objAnswer.getIdLevel('${e.type}')" class="lvlChoose w-full bg-white text-black hover:bg-black hover:text-white"  >
+            <button onclick="getLevelById('${e.type}')" class="lvlChoose w-full bg-white text-black hover:bg-black hover:text-white"  >
                 Level : ${e.type}
             </button>
 
          `
         })
         
-        divBtn.innerHTML += `<button id='SubmitAnswersInput' onclick="objAnswer.getAllAnswersFromInput()" class='  inputNbr start text-white font-bold py-2 px-4 rounded  transition duration-500 ease-in-out bg-black hover:bg-black hover:text-white transform hover:-translate-y-0 hover:scale-100' >Send</button>`
+        divBtn.innerHTML += `<button id='SubmitAnswersInput' onclick="getAllAnserwFromInputs()" class='  inputNbr start text-white font-bold py-2 px-4 rounded  transition duration-500 ease-in-out bg-black hover:bg-black hover:text-white transform hover:-translate-y-0 hover:scale-100' >Send</button>`
         DisplayAnsw.appendChild(level)
         DisplayAnsw.appendChild(div)
         DisplayAnsw.appendChild(divBtn)
@@ -285,6 +293,7 @@ class AddAnswers {
 
 
 let objAnswer = new AddAnswers()
+let objLvl = new AddLevel({})
 
 
 
@@ -297,3 +306,8 @@ SubmitInputCount.addEventListener("click", (e) => {
 CloseAnswer.addEventListener("click",()=>{
     DisplayAnsw.style.display = "none"
 })
+
+
+
+
+

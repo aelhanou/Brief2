@@ -14,7 +14,8 @@
       "Question": "1 + 4",
       "Score": "10",
       "type": "Question",
-      "id": "dda3a4bd-3dfb-4a25-85b8-bed37ce3aa9b"
+      "id": "dda3a4bd-3dfb-4a25-85b8-bed37ce3aa9b",
+      "level": "medium"
     },
     {
       "Question": "444 +  444",
@@ -308,6 +309,28 @@
         {
           "answer": "122 + 1",
           "status": true
+        }
+      ]
+    },
+    {
+      "id": "526fc681-aa5d-4318-b50f-ec99f1b94087",
+      "QuestionId": "dda3a4bd-3dfb-4a25-85b8-bed37ce3aa9b",
+      "AnswersPossible": [
+        {
+          "answer": "yo",
+          "status": true
+        },
+        {
+          "answer": "ttt",
+          "status": false
+        },
+        {
+          "answer": "erer",
+          "status": true
+        },
+        {
+          "answer": "www",
+          "status": false
         }
       ]
     }
@@ -609,6 +632,18 @@
       ],
       "id": 36,
       "hasQuestions": true
+    },
+    {
+      "Subject": "google ads",
+      "type": "Parent",
+      "ArrayOfChilds": [],
+      "id": 37
+    },
+    {
+      "Subject": "mini Chapiter 1",
+      "type": "Child",
+      "ArrayOfChilds": [],
+      "id": 38
     }
   ]
 }
